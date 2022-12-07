@@ -16,3 +16,4 @@ price_y_axis = [20, 50, 40, int(today_price_data)]
 plt.plot(data_x_axis, price_y_axis)
 plt.title("Price Transition")
 plt.show()
+# kkk
