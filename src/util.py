@@ -20,9 +20,9 @@ def read_csv(product_file):
     Args:
         procuct_file(str): 対象のファイル
     
-    Return:
-        dates(str): 今日の日付
-        price(str): 今日の価格
+    Returns:
+        dates(str):
+        price(str): 
     """
     path = generate_path("/" + product_file)
     with open(path, 'r') as data:
