@@ -1,6 +1,6 @@
 from pathlib import Path
 from urllib import request
-import re
+import glob
 
 def generate_path(path):
     """絶対パスを生成する
@@ -32,3 +32,17 @@ def read_csv(product_file):
         dates.append(date)
         prices.append(price)  
     return dubble_list
+
+def read_data():
+    """
+    Return:
+      filename_list(list): e.g.) [desk.csv, laptop,csv]
+    
+    dataにある.csvファイルの名前をリスト化"""
+    sloppy_files = glob.glob('data/*.csv')
+    filename_list = []
+    for data_number in sloppy_files:
+      sloppy_files_list = data_number.split("\\")
+      sloppy_name = sloppy_files_list[1]
+      filename_list.append(sloppy_name)
+    return filename_list
