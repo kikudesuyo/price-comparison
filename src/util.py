@@ -34,11 +34,11 @@ def read_csv(product_file):
     return dubble_list
 
 def read_data():
-    """
+    """dataにある.csvファイルの名前をリスト化"
     Return:
       filename_list(list): e.g.) [desk.csv, laptop,csv]
     
-    dataにある.csvファイルの名前をリスト化"""
+    """
     sloppy_files = glob.glob('data/*.csv')
     filename_list = []
     for data_number in sloppy_files:

@@ -4,6 +4,7 @@ from util import read_csv, read_data
 """秘書問題を基に作成"""
 filename_list = read_data()
 for i in filename_list:
+  print("Product name is : " + i)
   dubble_list = read_csv("data/" + i)
   purchase_deadline  = 100
   price = dubble_list[1]
