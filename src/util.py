@@ -13,23 +13,22 @@ def generate_path(path):
     """
     return str(Path(__file__).parents[1]) + path
 
-
 def read_csv(product_file):
     """日付と価格を出力
     
     Args:
-        procuct_file(str): 対象のファイル
+      procuct_file(str): 対象のファイル
     
-    Returns:
-        dates(str):
-        price(str): 
+    Return:
+      dubble_list(list): 日付と値段の2重リスト  
     """
     path = generate_path("/" + product_file)
     with open(path, 'r') as data:
       dates = []
       prices = []
+      dubble_list = [dates, prices]
       for line in data:
         [date, price] = line.split(',')
         dates.append(date)
         prices.append(price)  
-    return [dates, prices]
+    return dubble_list
