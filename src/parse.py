@@ -28,7 +28,7 @@ class Parser(HTMLParser):
       print(data)
       self.flag = False
 
-with open('../data/apple-pencil.html', 'r') as f:
+with open('../apple-pencil.html', 'r') as f:
     parse = Parser()
     parse.feed(f.read())
 
